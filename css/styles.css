@@ -624,8 +624,17 @@ background-color: transparent;
 width: 358px;
 height: 50px;
 padding-left: 16px;
+transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1) 
 }
 
+.footer-input:focus{
+    color: #FFFFFF;
+}
+
+
+.footer-input:focus::placeholder{
+    color: #FFFFFF;
+}
 .footer-input::placeholder{
 font-family: 'Roboto';
 font-style: normal;
@@ -636,6 +645,7 @@ display: flex;
 align-items: center;
 letter-spacing: 0.03em;
 color: rgba(255, 255, 255, 0.6);
+transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1) ;
 }
 
 .footer-btn{
@@ -650,14 +660,24 @@ font-weight: 700;
 font-size: 16px;
 line-height: 1.88;
 align-items: center;
-text-align: center;
+display: flex;
 letter-spacing: 0.06em;
 color: #FFFFFF;
 margin-left: 12px;
+
+justify-content: center;
 }
 
 .footer-link{
     margin-left: 93px;
+}
+
+.footer-form{
+    display: flex;
+}
+
+.footer-btn-svg{
+    margin-left: 10px;
 }
 
 /*--------------------------------------------------------------------------------*/
@@ -789,9 +809,9 @@ transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop{
-    position: fixed;
-    top: 0;
-    left: 0;
+position: fixed;
+top: 0;
+left: 0;
 width: 100%;
 height: 100%;
 background-color: rgba(25, 28, 38, 0.252);
@@ -802,7 +822,7 @@ transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-b
 .backdrop.is-hidden .modal{
     transform: translate(-50%, -50%) scale(0);
 }
-
+/*-----------------------------MODAL--------------------------------*/
 .modal{
 position: absolute;
 top: 50%;
@@ -865,7 +885,8 @@ border-radius: 4px;
 width: 100%;
 height: 40px;
 padding-left: 42px;
-
+transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) ;
+transition: outline 250ms cubic-bezier(0.4, 0, 0.2, 1) ;
 }
 
 .modal-input:focus{
@@ -886,6 +907,9 @@ padding-left: 42px;
     fill: #2196F3;
 }
 
+.input-icon{
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1) 
+}
 
 .modal-input-comment{
 border: 1px solid rgba(33, 33, 33, 0.2);
@@ -907,15 +931,18 @@ color: rgba(117, 117, 117, 0.5);
 }
 
 .modal-text-area{
-    width: 100%;
-    height: 120px;
-    border: 1px solid rgba(33, 33, 33, 0.2);
+width: 100%;
+height: 120px;
+border: 1px solid rgba(33, 33, 33, 0.2);
 border-radius: 4px;
 resize: none;
 padding-top: 12px;
 padding-bottom: 12px;
 padding-left: 16px;
 padding-right: 16px;
+margin-top: 4px;
+transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) ;
+transition: outline 250ms cubic-bezier(0.4, 0, 0.2, 1) ;
 }
 
 .modal-text-area:focus{
@@ -940,6 +967,10 @@ padding-right: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.modal-close-btn{
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1) ;
 }
 
 .modal-close-icon:focus{
